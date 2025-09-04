@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Scientific Calculator</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="calc">
+    <header class="top">
+      <div class="brand">SciCalc</div>
+      <label class="mode">
+        <input id="degToggle" type="checkbox" />
+        <span>DEG</span>
+        <span class="slider"></span>
+        <span>RAD</span>
+      </label>
+    </header>
+
+    <div class="display">
+      <input id="expr" type="text" placeholder="0" readonly />
+      <div id="ans" class="ans">= 0</div>
+    </div>
+
+    <div class="keys">
+      <!-- Row 1 -->
+      <button data-act="clear" class="danger">AC</button>
+      <button data-act="back">⌫</button>
+      <button data-val="(">(</button>
+      <button data-val=")">)</button>
+      <button data-act="percent">%</button>
+
+      <!-- Row 2 -->
+      <button data-fn="sqr">x²</button>
+      <button data-fn="cube">x³</button>
+      <button data-fn="pow">x^y</button>
+      <button data-fn="sqrt">√</button>
+      <button data-val="÷" class="op">÷</button>
+
+      <!-- Row 3 -->
+      <button data-fn="sin">sin</button>
+      <button data-fn="cos">cos</button>
+      <button data-fn="tan">tan</button>
+      <button data-fn="ln">ln</button>
+      <button data-fn="log">log</button>
+
+      <!-- Row 4 -->
+      <button data-val="7">7</button>
+      <button data-val="8">8</button>
+      <button data-val="9">9</button>
+      <button data-val="×" class="op">×</button>
+      <button data-fn="fact">n!</button>
+
+      <!-- Row 5 -->
+      <button data-val="4">4</button>
+      <button data-val="5">5</button>
+      <button data-val="6">6</button>
+      <button data-val="−" class="op">−</button>
+      <button data-val="π">π</button>
+
+      <!-- Row 6 -->
+      <button data-val="1">1</button>
+      <button data-val="2">2</button>
+      <button data-val="3">3</button>
+      <button data-val="+" class="op">+</button>
+      <button data-val="e">e</button>
+
+      <!-- Row 7 -->
+      <button data-val="0" class="wide">0</button>
+      <button data-val=".">.</button>
+      <button data-act="equals" class="equals">=</button>
+    </div>
+  </div>
+
+  <footer class="note">
+    Tip: Use buttons only (keyboard optional). DEG/RAD toggle affects sin, cos, tan, and their inverses.
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
